@@ -1,0 +1,31 @@
+{
+  "canisters": {
+   "token": {
+      "main": "src/token/main.mo",
+      "type": "motoko"
+    },
+    "database": {
+      "main": "src/database/IndexCanister.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": "vessel sources"
+    }
+  },
+  "networks": {
+    "staging": {
+      "providers": [
+        "https://ic0.app"
+      ],
+      "type": "persistent"
+    },
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
